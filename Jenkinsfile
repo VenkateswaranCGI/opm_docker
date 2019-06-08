@@ -6,6 +6,7 @@ pipeline {
   stages {
     stage('ceraterepo') {
 	steps {
+	  sh 'chmod a+x build.sh'
       sh './build.sh $Terraform'
 	  }
     }

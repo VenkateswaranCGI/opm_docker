@@ -11,7 +11,7 @@ if [ $# -eq 0 ]
 fi
 terraform_action=$1
 # Moving to the specific folder to get terraform scripts
-cd /home/ubuntu/tf/dev/
+cd ./terraform/environments/dev/us-west-2/management/
 # Initializing terraform
 terraform init
 if [ $terraform_action == "plan" ]

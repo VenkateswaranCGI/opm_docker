@@ -20,8 +20,8 @@ pipeline {
       steps {
 
         sh 'docker rmi -f 796006474439.dkr.ecr.us-west-2.amazonaws.com/processlink:latest'
-        sh 'docker tag ubuntu:latest 796006474439.dkr.ecr.us-west-2.amazonaws.com/processlink:latest'
-        sh 'docker push 011821064023.dkr.ecr.us-west-2.amazonaws.com/processlink:latest'
+        sh 'docker tag ubuntu:16.04 796006474439.dkr.ecr.us-west-2.amazonaws.com/processlink:latest'
+        sh 'docker push 796006474439.dkr.ecr.us-west-2.amazonaws.com/processlink:latest'
       }
     }
   }

@@ -6,7 +6,7 @@ pipeline {
   stages {
     stage('ceraterepo') {
 	steps {
-      sh '/home/ubuntu/tf/build.sh $Terraform'
+      sh './build.sh $Terraform'
 	  }
     }
   }

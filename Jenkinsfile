@@ -13,8 +13,7 @@ pipeline {
     }
 	stage('build-docker') {
 	steps {
-	  sh 'cd ./docker/'
-      sh 'docker build .'
+      sh 'docker build ./docker/.'
 	  }
     }
   }

@@ -17,10 +17,9 @@ pipeline {
 	  }
     }
     stage('push') {
-      when { equals actual: params.Push, expected: true }
       steps {
-	    sh 'aws configure set aws_access_key_id AKIA3SVNO4LDQO3S3ZSA'
-		sh 'aws configure set aws_secret_access_key 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'
+	    sh 'aws configure set aws_access_key_id AKIA3SVNO4LDSSLAXVAV'
+		sh 'aws configure set aws_secret_access_key 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'
         sh '$(aws --no-verify-ssl ecr get-login --no-include-email --region us-west-2)'
 
         sh 'docker rmi -f 796006474439.dkr.ecr.us-west-2.amazonaws.com/processlink:latest'

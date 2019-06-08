@@ -22,13 +22,6 @@ elif [ $terraform_action == "apply" ]
 then
 	# Apply the terraform script to create the resources on AWS environment
 	terraform apply -auto-approve
-	cd /home/ubuntu/docker/
-	docker build .
-	aws configure set aws_access_key_id AKIA3SVNO4LD5UWC5LHJ
-	aws configure set aws_secret_access_key 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
-	"$(aws --no-verify-ssl ecr get-login --no-include-email --region us-west-2)"
-	docker tag ubuntu:latest 796006474439.dkr.ecr.us-west-2.amazonaws.com/processlink:latest
-	docker push 796006474439.dkr.ecr.us-west-2.amazonaws.com/processlink:latest
 elif [ $terraform_action == "destroy" ]
 then
 	# Destroy the terraform script to remove the resources on AWS environment
